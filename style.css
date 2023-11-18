@@ -1,0 +1,65 @@
+/* ESTILO GERAL */
+
+*{ /* *{} é o seletor universal... aplica em todos os elementos */
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: rgb(17, 17, 17);
+    height: 100vh; /* 100vh para tomar todo o espaço da nossa tela */
+}
+
+.interface{
+    max-width: 1280px; /* altura máxima */
+    margin: auto; /* ficar centralizada na tela */ 
+}
+
+/* ESTILO DO CABEÇALHO */
+
+header{
+    padding: 40px 4%; /* esse 4% é para ele não ficar muito grudado nas laterais */ 
+}
+
+header > .interface{ /* chama o header e chama a class que está diretamente dentro da classe header - para não interferir nos outros elementos */
+    display: flex;
+    align-items: center; /* align-items:  controla o alinhamento de todos os itens no eixo transversa */
+    justify-content: space-between; /*  justify-content alinha os elementos no eixo principal */
+}
+
+header a{
+    color: #929292;/* mudando a cor dos elementos dentro do <a> que no caso é font do cabeçalho */
+    text-decoration: none;
+    display: inline-block; /* coloquei o display: inline-block para ele aceitar o transform */
+    transition: .5s; /* a velocidade de mudança de cor do hover/transform */ 
+}
+
+header a:hover{
+    color: #00bceb;
+    transform: scale(1.05);
+}
+
+header nav ul{
+    list-style-type: none; /* isso serve para retirar o ponto na frente da lista */
+}
+
+header nav ul li{
+    display: inline-block; /* deixa a lista uma do lado da outra */
+    padding: 0 40px; /* 0 encima e embaixo e 40px na esquerda e direita */
+}
+
+header .Dg-contato button{
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #02a5ce;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer; /* muda o ponteiro para o "dedinho" quando passa por cima */
+}
+
+header .Dg-contato button:hover{
+    box-shadow: 0px 0px 8px #02b1dd;
+}
