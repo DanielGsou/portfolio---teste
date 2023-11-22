@@ -17,6 +17,21 @@ body{
     margin: auto; /* ficar centralizada na tela */ 
 }
 
+.flex{
+    display: flex;
+}
+
+.Dg-contato button{
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #09ff00;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer; /* muda o ponteiro para o "dedinho" quando passa por cima */
+    transition: .3s;
+}
+
 /* ESTILO DO CABEÇALHO */
 
 header{
@@ -37,7 +52,7 @@ header a{
 }
 
 header a:hover{
-    color: #00bceb;
+    color: #09ff00;
     transform: scale(1.05);
 }
 
@@ -50,16 +65,54 @@ header nav ul li{
     padding: 0 40px; /* 0 encima e embaixo e 40px na esquerda e direita */
 }
 
-header .Dg-contato button{
-    padding: 10px 40px;
-    font-size: 18px;
-    font-weight: 600;
-    background-color: #02a5ce;
-    border: 0;
-    border-radius: 30px;
-    cursor: pointer; /* muda o ponteiro para o "dedinho" quando passa por cima */
+.Dg-contato button:hover{
+    box-shadow: 0px 0px 8px #09ff00;
+    transform: scale(1.05);
 }
 
-header .Dg-contato button:hover{
-    box-shadow: 0px 0px 8px #02b1dd;
+/* ESTILO DO TOPO DO SITE */
+
+section.topo-do-site{
+    padding: 40px 4%; /* encima e embaixo 40px e nas laterais 4% - assim eles não ficam colocados quando a tela for reduzida*/ 
+}
+
+section.topo-do-site .flex{
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+}
+
+.topo-do-site h1{
+    color: #fff;
+    font-size: 42px;
+    line-height: 40px; /* isso deixou os textos mais juntos */
+}
+
+.topo-do-site .txt-topo-site h1 span{
+    color: #09ff00;
+}
+
+.topo-do-site .txt-topo-site p{
+    color: #fff;
+    margin: 40px 0; /* feito para dar uma afastada no parágrafo */
+}
+
+.topo-do-site .img-topo-site img{
+    position: relative; /* colocamos isso pq esse "top" "left" etc.. só funcionam se o elemento estiver em uma posição diferente do static q é o padrao */
+    animation: flutuar 2s ease-in-out infinite alternate;
+}
+
+/* 
+ease-in-out = faz ir suave, ficar rapida no meio e depois continuar suave
+infinite = para ficar em loop
+alternate = isso faz q a animation não resete e volte ao inicio.. ela vai e volta para o mesmo camio
+*/
+
+@keyframes flutuar{
+    0%{
+        top: 0;
+    }
+    100%{
+        top: 30px;
+    }
 }
